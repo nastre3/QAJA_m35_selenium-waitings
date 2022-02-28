@@ -19,9 +19,7 @@ public class TestTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // неявное (implicit)
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        // wait.until(ExpectedConditions.elementToBeClickable(By.id("some id")));
         driver.get("https://www.aviasales.ru/search/LED1102MOW13021?request_source=search_form&payment_method=all");
         wait.until(ExpectedConditions.elementToBeClickable(By.className("filter-group"))); // явное (explicit)
-        // driver.get("https://google.com");
     }
 }
